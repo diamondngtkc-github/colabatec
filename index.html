@@ -3,64 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Côlab</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #0f0f0f;
-      color: #f0f0f0;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .container {
-      max-width: 480px;
-    }
-
-    h1 {
-      font-size: 1rem;
-      font-weight: 400;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #888;
-      margin-bottom: 1.5rem;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #ccc;
-      margin-bottom: 2rem;
-    }
-
-    a {
-      color: #f0f0f0;
-      text-decoration: none;
-      border-bottom: 1px solid #555;
-      padding-bottom: 2px;
-      transition: border-color 0.2s;
-    }
-
-    a:hover {
-      border-color: #f0f0f0;
-    }
-  </style>
+  <title>Côlab.atec</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Josefin+Sans:wght@300;400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="container">
-    <h1>Côlab's website is under maintenance</h1>
-    <!-- Optional: add your email or social link below -->
-    <p><a href="https://www.instagram.com/colab.atec/">Visit our instagram</a></p>
-  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Côlab.atec logo" class="nav__logo-img" />
+        </a>
+      </div>
+      <ul class="nav__links">
+        <li><a href="about.html">A b o u t &nbsp; u s</a></li>
+        <li><a href="projects.html">P r o j e c t s</a></li>
+        <li><a href="contact.html">G e t &nbsp; i n &nbsp; t o u c h</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- ONGOING SHOW -->
+    <section class="section section--ongoing">
+      <div class="section__label">
+        <span class="arrow">→</span>
+        <span class="label-text">o n g o i n g &nbsp; s h o w</span>
+      </div>
+      <h2 class="section__title">Déjà Vu at Arc Gallery</h2>
+      <div class="feature-banner">
+        <img src="assets/dejavu.png" alt="Déjà Vu at Arc Gallery" class="feature-banner__img" />
+        <div class="feature-banner__overlay">
+          <!--<p class="feature-banner__sub">2025 Juried Exhibition</p> -->
+          <a href="dejavu.html" class="btn-orange">Read more!</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- FUTURE EVENTS -->
+    <section class="section section--future">
+      <div class="section__label">
+        <span class="arrow">→</span>
+        <span class="label-text">f u t u r e &nbsp; e v e n t s</span>
+      </div>
+      <div class="event-row">
+        <div class="event-row__left">
+          <h3 class="event-title">Long-ing in Dallas</h3>
+          <p class="event-date">Sep 2026</p>
+        </div>
+        <div class="event-row__right">
+          <a href="https://dallasculture.org/cultural-funding-programs/artsactivate/" class="event-link">ArtsActivate grant from the City of Dallas</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- PAST EVENTS -->
+    <section class="section section--past">
+      <div class="section__label">
+        <span class="arrow">→</span>
+        <span class="label-text">p a s t &nbsp; e v e n t s</span>
+      </div>
+
+      <div class="event-row">
+        <div class="event-row__left">
+          <h3 class="event-title">Austin Conference</h3>
+          <p class="event-date">23–25 Oct 2025</p>
+        </div>
+        <div class="event-row__right">
+          <a href="https://www.tasart.org/upcoming-conference" class="event-link">Poetry in New Media: Women Artists Exploring Art, Technology and Memory</a>
+        </div>
+      </div>
+
+      <div class="event-row event-row--spaced">
+        <div class="event-row__left">
+          <h3 class="event-title">Midnight Nowhere</h3>
+          <p class="event-date">1–2 Nov 2025</p>
+        </div>
+        <div class="event-row__right">
+          <a href="https://ra.co/events/2238678" class="event-link">Creatures of midnight</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Copyright &copy; 2025 – Côlab.atec</p>
+  </footer>
+
 </body>
 </html>

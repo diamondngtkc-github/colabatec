@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Déjà Vu — Côlab.atec</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Josefin+Sans:wght@300;400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 5rem;
+    }
+
+    /* ── CONTENT GRID: text left, poster right ── */
+    .dv-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 5rem;
+      align-items: start;
+      padding: 2.5rem 0 5rem;
+    }
+
+    /* ── LEFT COLUMN ── */
+    .dv-left {}
+
+    .dv-title {
+      font-family: var(--font-body);
+      font-size: 2.6rem;
+      font-weight: 500;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 1.5rem;
+    }
+
+    .dv-body {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--white);
+      opacity: 0.85;
+    }
+
+    .dv-body p + p {
+      margin-top: 1rem;
+    }
+
+    .dv-details {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .dv-detail-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+
+    .dv-detail-icon {
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .dv-detail-text {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--white);
+      opacity: 0.85;
+      line-height: 1.5;
+    }
+
+    .dv-detail-text strong {
+      font-weight: 400;
+    }
+
+    .dv-special {
+      margin-top: 1.5rem;
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--white);
+      opacity: 0.85;
+      line-height: 1.6;
+    }
+
+    /* Artists list */
+    .dv-artists-heading {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 2.5rem 0 1rem;
+    }
+
+    .dv-artists-list {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--white);
+      opacity: 0.85;
+      line-height: 1.75;
+    }
+
+    /* CTA link */
+    .dv-cta {
+      margin-top: 2rem;
+    }
+
+    .dv-private-link {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      color: var(--white);
+      border-bottom: 1px solid var(--white);
+      padding-bottom: 1px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .dv-private-link:hover {
+      color: var(--orange);
+      border-color: var(--orange);
+    }
+
+    .dv-see-you {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--white);
+      opacity: 0.65;
+      margin-top: 1.25rem;
+    }
+
+    /* ── RIGHT COLUMN: poster ── */
+    .dv-right {}
+
+    .dv-poster {
+      width: 100%;
+      /*aspect-ratio: 2 / 3;*/
+      overflow: hidden;
+      border-radius: 4px;
+      background: linear-gradient(160deg, #1a2e6e, #0a4a8c, #0891b2);
+    }
+
+    .dv-poster img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .dv-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 2rem 0 4rem;
+      }
+      .dv-right { order: -1; }
+      .dv-title { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Côlab.atec logo" class="nav__logo-img" />
+        </a>
+      </div>
+      <ul class="nav__links">
+        <li><a href="about.html">A b o u t &nbsp; u s</a></li>
+        <li><a href="projects.html">P r o j e c t s</a></li>
+        <li><a href="contact.html">G e t &nbsp; i n &nbsp; t o u c h</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <section class="section section--ongoing">
+
+      <!-- Section label -->
+      <div class="section__label">
+        <span class="arrow">→</span>
+        <span class="label-text">o n g o i n g &nbsp; s h o w</span>
+      </div>
+
+      <!-- Page title -->
+      <h1 class="dv-title">Déjà Vu at Arc Gallery</h1>
+
+      <!-- Two-column: text left, poster right -->
+      <div class="dv-grid">
+
+        <div class="dv-left">
+          <div class="dv-body">
+            <p>Côlab is proud to present Déjà Vu, the juried art show at ARC gallery!</p>
+            <p>This immersive group exhibition dives deep into the themes of time, memory, and perception, featuring a diverse range of innovative contemporary artworks — from interactive installations and video art to painting and performance.</p>
+          </div>
+
+          <div class="dv-details">
+            <div class="dv-detail-row">
+              <span class="dv-detail-icon">📅</span>
+              <span class="dv-detail-text">Don't Miss the Opening Reception:<br>
+                <strong>Friday, November 7th, 2025 &nbsp;|&nbsp; 7–9 PM</strong>
+              </span>
+            </div>
+            <div class="dv-detail-row">
+              <span class="dv-detail-icon">📍</span>
+              <span class="dv-detail-text">ARC Gallery &nbsp;|&nbsp; 2602 Main St, Dallas, TX</span>
+            </div>
+          </div>
+
+          <div class="dv-special">
+            🎙 SPECIAL EVENT: Sound Interactive Performance @ 8:00 PM<br>
+            The exhibition runs through January 8, 2026, featuring works juried by Professor Marilyn Waligore.
+          </div>
+
+          <div class="dv-body" style="margin-top:1.5rem;">
+            <p>Featuring the work of 11 talented artists: Anisha Chaudhary, Amanda Dunbar, Betül Sertkaya, Diamond Nguyen, Daniel Kim, Kristen Duong, Monica Berlanga, Lauren E. Allen, Scott Tucker &amp; Baotran Vo, and Vaji Zamaniderkaani.</p>
+          </div>
+
+          <p class="dv-see-you">See you there!</p>
+        </div>
+
+        <div class="dv-right">
+          <div class="dv-poster">
+            <img src="assets/dejavu_poster.jpg" alt="Déjà Vu Exhibition Poster" />
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- CATALOGUE SECTION -->
+  <div class="catalogue-section">
+    <div class="catalogue-inner">
+      <div class="section__label" style="margin-bottom: 1.25rem;">
+        <span class="arrow">→</span>
+        <span class="label-text">e x h i b i t i o n &nbsp; c a t a l o g u e</span>
+      </div>
+      <h2 class="catalogue-title">Déjà Vu Catalogue</h2>
+      <p class="catalogue-desc">Browse the full exhibition catalogue presented by Côlab Collective &amp; ARC Gallery.</p>
+      <div class="catalogue-viewer">
+        <iframe
+          src="assets/catalog_dejavu.pdf"
+          title="Déjà Vu Exhibition Catalogue 2025–2026"
+          class="catalogue-iframe"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .catalogue-section {
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+      padding: 3rem 0 4rem;
+    }
+
+    .catalogue-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 5rem;
+    }
+
+    .catalogue-title {
+      font-family: var(--font-body);
+      font-size: 2rem;
+      font-weight: 500;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+    }
+
+    .catalogue-desc {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      margin-bottom: 2rem;
+    }
+
+    .catalogue-viewer {
+      width: 100%;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #1a1a1a;
+    }
+
+    .catalogue-iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .catalogue-inner { padding: 0 1.5rem; }
+      .catalogue-iframe { height: 420px; }
+      .catalogue-title { font-size: 1.5rem; }
+    }
+  </style>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Copyright &copy; 2025 – Côlab.atec</p>
+  </footer>
+
+</body>
+</html>

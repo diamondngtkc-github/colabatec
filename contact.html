@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Côlab.atec — Get in touch</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Josefin+Sans:wght@300;400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── BODY EXTENSION (contact page needs flex column for sticky footer) */
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── MAIN (contact needs flex:1 to push footer down) */
+    main {
+      flex: 1;
+    }
+
+    /* ── ACTIVE NAV LINK */
+    .nav__links a.active {
+      color: var(--orange);
+    }
+
+    /* ── CONTACT SECTION */
+    .section--contact {
+      padding: 4rem 0 6rem;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .contact__left {
+      padding-top: 0.5rem;
+    }
+
+    .contact__heading {
+      font-family: var(--font-body);
+      font-size: 3.2rem;
+      font-weight: 500;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact__desc {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 340px;
+    }
+
+    /* ── FORM */
+    .contact__form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      padding-top: 0.25rem;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-field label {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .form-field input,
+    .form-field textarea {
+      background-color: #1e1e1e;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.85rem 1.1rem;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--white);
+      outline: none;
+      width: 100%;
+      transition: border-color 0.2s, background-color 0.2s;
+      -webkit-appearance: none;
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: #444;
+    }
+
+    .form-field input:focus,
+    .form-field textarea:focus {
+      border-color: var(--orange);
+      background-color: #1a1a1a;
+    }
+
+    .form-field textarea {
+      resize: vertical;
+      min-height: 160px;
+      line-height: 1.6;
+    }
+
+    .btn-send {
+      display: inline-block;
+      background-color: var(--orange);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      padding: 0.85rem 2.5rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.15s;
+      align-self: flex-start;
+      margin-top: 0.5rem;
+    }
+
+    .btn-send:hover {
+      background-color: #d4541a;
+      transform: translateY(-1px);
+    }
+
+    /* ── SUCCESS MESSAGE */
+    .form-success {
+      display: none;
+      font-family: var(--font-body);
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--muted);
+      padding: 1rem 0;
+    }
+
+    /* ── RESPONSIVE */
+    @media (max-width: 768px) {
+      .section--contact {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 3rem 0 4rem;
+      }
+      .contact__heading { font-size: 2.2rem; }
+      .contact__desc { max-width: 100%; }
+      .btn-send { align-self: stretch; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Côlab.atec logo" class="nav__logo-img" />
+        </a>
+      </div>
+      <ul class="nav__links">
+        <li><a href="about.html">A b o u t &nbsp; u s</a></li>
+        <li><a href="projects.html">P r o j e c t s</a></li>
+        <li><a href="contact.html" class="active">G e t &nbsp; i n &nbsp; t o u c h</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <section class="section--contact">
+
+      <!-- LEFT -->
+      <div class="contact__left">
+        <div class="section__label">
+          <span class="arrow">→</span>
+          <span class="label-text">g e t &nbsp; i n &nbsp; t o u c h</span>
+        </div>
+        <h1 class="contact__heading">Contact<br>Us</h1>
+        <p class="contact__desc">Got an idea? Let's connect and make something happen.</p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="contact__right">
+        <form class="contact__form" id="contactForm">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your idea…" required></textarea>
+          </div>
+          <button type="submit" class="btn-send">Send message</button>
+        </form>
+        <p class="form-success" id="formSuccess">Thank you — we'll be in touch soon.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Copyright &copy; 2025 – Côlab.atec</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = this;
+      const data = new FormData(form);
+
+      try {
+        const response = await fetch('https://formspree.io/f/mnjbokna', {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          document.getElementById('formSuccess').style.display = 'block';
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      } catch (error) {
+        alert('Something went wrong. Please try again.');
+      }
+    });
+  </script>
+
+</body>
+</html>
