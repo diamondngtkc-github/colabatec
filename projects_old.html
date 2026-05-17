@@ -3,69 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects — Côlab.atec</title>
+  <title>Longing — Côlab.atec</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Josefin+Sans:wght@300;400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-  <style>
-    .dv-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 5rem;
-      align-items: start;
-      padding: 0 0 3rem;
-    }
-    .dv-poster {
-      width: 100%;
-      overflow: hidden;
-      border-radius: 4px;
-      background: linear-gradient(160deg, #1a2e6e, #0a4a8c, #0891b2);
-    }
-    .dv-poster img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .catalogue-title {
-      font-family: var(--font-body);
-      font-size: 2rem;
-      font-weight: 500;
-      color: var(--orange);
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      margin-bottom: 0.5rem;
-    }
-    .catalogue-desc {
-      font-family: var(--font-display);
-      font-size: 0.9rem;
-      font-weight: 300;
-      color: var(--muted);
-      letter-spacing: 0.04em;
-      margin-bottom: 2rem;
-    }
-    .catalogue-viewer {
-      width: 100%;
-      border-radius: 4px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      background: #1a1a1a;
-    }
-    .catalogue-iframe {
-      width: 100%;
-      height: 700px;
-      border: none;
-      display: block;
-    }
-    @media (max-width: 768px) {
-      .dv-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-      .dv-right { order: -1; }
-      .catalogue-iframe { height: 420px; }
-      .catalogue-title { font-size: 1.5rem; }
-    }
-  </style>
 </head>
 <body class="page--project">
 
@@ -93,62 +33,7 @@
       <span class="label-text">p a s t &nbsp; p r o j e c t s</span>
     </div>
 
-    <!-- ── DÉJÀ VU ── -->
-    <section id="dejavu" style="padding-bottom: 4rem; border-bottom: 1px solid var(--border); margin-bottom: 4rem;">
-
-      <h1 class="section__title">Déjà Vu at Arc Gallery</h1>
-
-      <!-- Two-column: text left, poster right -->
-      <div class="dv-grid">
-
-        <div class="dv-left">
-          <div class="text-block">
-            <p class="lead">Juried Group Exhibition — Interactive Installations, Video Art, Painting &amp; Performance.</p>
-            <p>Côlab presented Déjà Vu, a juried group exhibition at ARC Gallery exploring the themes of time, memory, and perception. The show featured a diverse range of contemporary artworks — from interactive installations and video art to painting and live performance — curated by Professor Marilyn Waligore.</p>
-          </div>
-
-          <div class="text-block">
-            <p class="block-heading">Exhibition Details</p>
-            <p>Opening Reception: 7 Nov 2025 &nbsp;|&nbsp; 7–9 PM<br />
-            Special Event: Sound Interactive Performance @ 8:00 PM<br />
-            On display: 7 Nov 2025 – 8 Jan 2026<br />
-            Venue: ARC Gallery &nbsp;|&nbsp; 2602 Main St, Dallas, TX</p>
-          </div>
-
-          <div class="text-block">
-            <p class="block-heading">Participating Artists</p>
-            <p>Anisha Chaudhary, Amanda Dunbar, Betül Sertkaya, Diamond Nguyen, Daniel Kim, Kristen Duong, Monica Berlanga, Lauren E. Allen, Scott Tucker &amp; Baotran Vo, and Vaji Zamaniderkaani.</p>
-          </div>
-        </div>
-
-        <div class="dv-right">
-          <div class="dv-poster">
-            <img src="assets/dejavu_poster.jpg" alt="Déjà Vu Exhibition Poster" />
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Catalogue -->
-      <div class="section__label" style="margin-bottom: 1.25rem;">
-        <span class="arrow">→</span>
-        <span class="label-text">e x h i b i t i o n &nbsp; c a t a l o g u e</span>
-      </div>
-      <h2 class="catalogue-title">Déjà Vu Catalogue</h2>
-      <p class="catalogue-desc">Browse the full exhibition catalogue presented by Côlab Collective &amp; ARC Gallery.</p>
-      <div class="catalogue-viewer">
-        <iframe
-          src="assets/catalog_dejavu.pdf"
-          title="Déjà Vu Exhibition Catalogue 2025–2026"
-          class="catalogue-iframe"
-        ></iframe>
-      </div>
-
-    </section>
-
-    <!-- ── LONGING ── -->
-    <section id="longing" style="padding-top: 4rem;">
-
+    <!-- Title — reuses .section__title -->
     <h1 class="section__title">Longing</h1>
 
     <!-- Intro -->
@@ -193,8 +78,6 @@
         </ul>
       </div>
     </div>
-
-    </section> <!-- /#longing -->
 
   </main>
 

@@ -255,6 +255,35 @@ main {
   border-color: var(--orange);
 }
 
+/* ── EVENT SCHEDULE LIST ────────────────── */
+.event-schedule {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.event-schedule li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+  color: var(--white);
+}
+
+.event-schedule__date {
+  white-space: nowrap;
+  font-style: italic;
+  min-width: 155px;
+}
+
+.event-schedule__desc {
+  flex: 1;
+}
+
 /* ── FOOTER ─────────────────────────────── */
 .footer {
   text-align: center;
@@ -361,6 +390,15 @@ main {
   }
 
   .event-row__left {
+    min-width: unset;
+  }
+
+  .event-schedule li {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .event-schedule__date {
     min-width: unset;
   }
 
