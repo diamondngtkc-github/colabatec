@@ -284,6 +284,58 @@ main {
   flex: 1;
 }
 
+/* ── EVENT CARDS ────────────────────────── */
+.event-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.event-card__img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.event-card__title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.event-card__details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 2rem;
+  align-items: start;
+}
+
+.event-card__col p {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--white);
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+.event-card__link {
+  color: var(--white);
+  border-bottom: 1px solid var(--white);
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.event-card__link:hover {
+  color: var(--orange);
+  border-color: var(--orange);
+}
+
 /* ── FOOTER ─────────────────────────────── */
 .footer {
   text-align: center;
@@ -408,6 +460,15 @@ main {
 
   .about-section__heading {
     font-size: 1.6rem;
+  }
+
+  .event-cards {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .event-card__img {
+    max-width: 100%;
   }
 }
 
